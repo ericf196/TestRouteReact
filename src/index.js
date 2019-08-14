@@ -26,15 +26,16 @@ const routing = (
 	          <Link to="/profile">Profile</Link>
 	        </li>
 	         <li>
-	         <Link to="/profile/detail">detail</Link>
+	         <Link to="/profile/detail">Detail</Link>
+	         </li>
+	         <li>
+	         <Link to="/profile/detail/create">Create</Link>
 	         </li>
 	    </ul>
 		 
-			  <Route  path="/" component={App} />
-		      
-		      <Route path="/home" component={Home} />
-
 	          <Switch>
+		        <Route exact  path="/" component={App} />
+		        <Route path="/home" component={Home} />
 		        <Route exact path="/profile" component={Profile} />
 		        <Route exact path="/profile/detail"  component={DetailProfile} />
 		        <Route  path="/profile/detail/create"  component={DetailCreate} />
